@@ -1,4 +1,4 @@
-<h1>Anotacoes sobre uso do Git e GitHub no Linux</h1>
+<h1>Anotacoes sobre Git e GitHub no Linux</h1>
 
 Download oficial Git
 
