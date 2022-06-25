@@ -57,7 +57,7 @@ $ git push -u origin main
 # Atualizando repositorio Git no Github
 $ git add *
 $ git commit -m "atualizando repositorio"
-$ git push
+$ git push -u origin main
 ------ FIM 
 
 # Atualizando repositorio local a partir do remoto (baixando Github no Git)
