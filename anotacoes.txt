@@ -1,0 +1,93 @@
+
+O Git é um sistema de controle de versionamento de codigo utilizado na maquina local. 
+O Github é uma plataforma de hospedagem de código-fonte e arquivos com controle de versão usando o Git.
+Os dois trabalham em conjunto.
+
+Paro utilizar o Git na máquina local, deve-se instalar a versão específica do sistema operacional.
+Local para download: https://git-scm.com/downloads/
+
+
+## Procedimentos para uso em Linux: Debian/Ubuntu ##
+    --------------------------------------------
+
+## Instalacao do Git
+$ sudo add-apt-repository ppa:git-core/ppa
+$ sudo apt update
+$ sudo apt install git
+------ FIM 
+
+## Criando chaves publica/privada para integracao Git/GitHub
+Objetiva nao precisar de autenticacao no Github quando atualizar repositorio.
+
+1-Gerar a chave ssh (chaves serao salvas em /home/usuario/.ssh/id_ed25519) 
+$ ssh-keygen -t ed25519 -C usuarii@email.com
+
+2-Copiar conteudo da chave publica e adicionar no GitHUb
+$ cat id_ed25519.pub
+
+3-Adicionar chave publica no GitHUb, em Settings... SSH Keys; 
+
+4-Iniciar o Agent no terminal Linux
+$ eval $(ssh-agent -s)
+
+4-Passar a chave pro Agent
+$ ssh-add id_ed25519
+------ FIM 
+
+# Criando novo repositorio com o Git
+1-criar um pasta/diretorio
+$ mkdir pasta
+
+2-iniciar o git dentro da pasta/diretorio criada
+$ git init
+
+3-cadastrar e-mail e usuario (mesmo e-mail e usuario cadastrado no GitHub)
+$ git config --global user.email "usuario@email.com"
+$ git config --global user.name nomedousuario
+
+4-Enviar todos os arquivos para o Git, descrevendo o motivo da inclusao/envio
+$ git add *
+$ git commit -m "commit inicial"
+
+5-enviar arquivos do Git para o Github
+$ git remote add origin git@github.com:nomedousuario/nome-do-repositorio.git
+$ git push -u origin main
+------ FIM 
+
+# Atualizando repositorio Git no Github
+$ git add *
+$ git commit -m "atualizando repositorio"
+$ git push
+------ FIM 
+
+# Atualizando repositorio local a partir do remoto (baixando Github no Git)
+$ git pull
+------ FIM 
+
+# Alguns Comandos 
+-----------------
+git status (verifica o status dos arquivos)
+git config --list (verifica configuracoes)
+git config --global --unset user.email (remove e-mail das configuracoes)
+git config --global --unset user.username (remove username das configuracoes)
+git remote -v (lista os repositorios remotos cadastrados)
+git pull (atualiza repositorio local com base no repositorio remoto)
+git push (atualiza repositorio remoto)
+git clone nomeDoRepositorio.git (clonar repositorio)
+
+# Dicas do Github
+-----------------
+…or create a new repository on the command line
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:marcocifuentes/NomeDoRepositorio.git
+git push -u origin main
+
+…or push an existing repository from the command line
+git remote add origin git@github.com:marcocifuentes/NomeDoRepositorio.git
+git branch -M main
+git push -u origin main
+
+
