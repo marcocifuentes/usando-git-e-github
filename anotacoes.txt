@@ -20,7 +20,7 @@ $ sudo apt install git
 Objetiva nao precisar de autenticacao no Github quando atualizar repositorio.
 
 1-Gerar a chave ssh (chaves serao salvas em /home/usuario/.ssh/id_ed25519) 
-$ ssh-keygen -t ed25519 -C usuarii@email.com
+$ ssh-keygen -t ed25519 -C usuario@email.com
 
 2-Copiar conteudo da chave publica e adicionar no GitHUb
 $ cat id_ed25519.pub
