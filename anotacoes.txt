@@ -91,3 +91,13 @@ git branch -M main
 git push -u origin main
 
 
+# Usando .gitignore
+-------------------
+.gitignore é um arquivo texto que informa ao Git quais arquivos ou pastas devem ser ignoraradas.
+
+-Criar arquivo ".gitignore " e incluir as exclusões.
+Ex.: 
+# Ignore todos os arquivos de texto
+*.txt
+
+
